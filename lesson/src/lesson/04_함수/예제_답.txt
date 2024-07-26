@@ -1,0 +1,38 @@
+01
+function sayHello() {
+    return "Hello";
+}
+
+02
+congratulation();
+
+03
+function sayHello() {
+  alert("Hello");
+}
+
+04
+function sayHello(name) {
+  alert("Hello, " + name);
+}
+onClick={() => {
+  sayHello("Kim");
+}}
+onClick={() => {
+  sayHello("Han");
+}}
+
+05
+function checkAge() {
+  const age = prompt("당신의 나이는?", "");
+  if (age >= 20) {
+    alert("성인입니다");
+  } else {
+    alert("성인이 아닙니다");
+  }
+}
+onClick={() => checkAge()}
+
+05
+
+06

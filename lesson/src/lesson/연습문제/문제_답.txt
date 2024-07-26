@@ -1,0 +1,67 @@
+01
+cafeList.map((cafe) => {
+  if (cafeInput === cafe) {
+    searchResult = true;
+  }
+});
+
+---
+
+02
+database.map((user) => {
+  if (user.id === id && user.pwd === pwd) {
+    message = (
+      <div>
+        안녕하세요, {user.age}세 {user.name}님!
+      </div>
+    );
+  }
+});
+
+---
+
+03
+function findVip() {
+  database.map((user) => {
+    if (user.amount >= 500) {
+      console.log(user.name);
+    }
+  });
+}
+onClick={() => findVip()}
+
+---
+
+04
+function findVip() {
+  database.map((user) => {
+    let amountSum = 0;
+    user.amountLog.map((amount) => {
+      amountSum += amount;
+    });
+    if (amountSum >= 500) {
+      console.log(user.name);
+    }
+  });
+}
+onClick={() => findVip()}
+
+---
+
+05
+function findVip() {
+  database.map((user) => {
+    let amountSum = sumAmountLog(user.amountLog);
+    if (amountSum >= 500) {
+      console.log(user.name);
+    }
+  });
+}
+function sumAmountLog(amountLog) {
+  let sum = 0;
+  amountLog.map((amount) => {
+    sum += amount;
+  });
+  return sum;
+}
+onClick={() => findVip()}

@@ -1,0 +1,24 @@
+01
+grade.sort((a, b) => a - b);
+grade.map((score) => score + " ")
+
+02
+database.sort((a, b) => a.amount - b.amount);
+database.map((data) => data.name + " ")
+
+03
+function getAdultUser() {
+  console.log(database.filter((user) => user.age >= 20));
+}
+
+04
+vipList = database.filter((user) => user.amount >= 700);
+
+05
+
+
+06
+
+07
+
+08
