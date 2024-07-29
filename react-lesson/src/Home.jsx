@@ -1,23 +1,61 @@
 import React, { useState } from "react";
 
 function Home() {
-  const [count, setCount] = useState(0);
-
-  function increment() {
-    setCount(count + 1);
-  }
-
   return (
     <div>
-      <div id="lesson-title">상태</div>
+      <div id="lesson-title">React Lesson</div>
       <div id="lesson-content">
-        <div className="title">상태 변경</div>
-        <div>`count` 라는 상태 변수에 직접 접근하지 않고,</div>
-        <div>`setCount` 라는 상태 변경 함수를 통해 값을 변경</div>
+        <div className="title">01 상태</div>
+        <div>
+          <div>
+            [01 문법]{" "}
+            <a className="link-button" href="/0101">
+              이동
+            </a>
+          </div>
 
-        <div className="title">예시</div>
-        <div>count: {count}</div>
-        <button onClick={() => increment()}>count 증가</button>
+          <div>
+            [예제 01] 클릭 카운팅 1{" "}
+            <a className="link-button" href="/0102">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 02] 클릭 카운팅 2{" "}
+            <a className="link-button" href="/0103">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 03] 손님 카운팅{" "}
+            <a className="link-button" href="/0104">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 04] 탁구 심판{" "}
+            <a className="link-button" href="/0105">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 05] 댓글 남기기{" "}
+            <a className="link-button" href="/0106">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 06] 로그인{" "}
+            <a className="link-button" href="/0107">
+              이동
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

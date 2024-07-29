@@ -1,0 +1,42 @@
+01
+setClick(click + 1);
+
+02
+const [click, setClick] = useState(0);
+function plusClick() {
+  setClick(click + 1);
+}
+
+03
+const [customer, setCustomer] = useState(20);
+function 손님_입장() {
+  setCustomer(customer + 1);
+}
+function 손님_퇴장() {
+  setCustomer(customer - 1);
+}
+
+04
+const [teamAScore, setTeamAScore] = useState(0);
+const [teamBScore, setTeamBScore] = useState(0);
+function plusTeamAScore() {
+  setTeamAScore(teamAScore + 1);
+}
+function plusTeamBScore() {
+  setTeamBScore(teamBScore + 1);
+}
+
+05
+const [comment, setComment] = useState("");
+function typeComment(input) {
+  setComment(input);
+}
+onChange={(event) => typeComment(event.target.value)}
+
+06
+onChange={(event) => setId(event.target.value)} 
+onChange={(event) => setPwd(event.target.value)}
+onClick={() => doLogin()}
+
+07
+
