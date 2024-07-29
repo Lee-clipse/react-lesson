@@ -43,13 +43,13 @@ import Index0407 from "./lesson/04_함수/예제_05.jsx";
 import Index0501 from "./lesson/05_메서드/01_정렬/01_정렬.jsx";
 import Index0502 from "./lesson/05_메서드/01_정렬/예제_01.jsx";
 import Index0503 from "./lesson/05_메서드/01_정렬/예제_02.jsx";
-import Index0504 from "./lesson/05_메서드/02_필터링/02_필터링";
+import Index0504 from "./lesson/05_메서드/02_필터링/02_필터링.jsx";
 import Index0505 from "./lesson/05_메서드/02_필터링/예제_03.jsx";
 import Index0506 from "./lesson/05_메서드/02_필터링/예제_04.jsx";
-import Index0507 from "./lesson/05_메서드/03_날짜/03_날짜";
+import Index0507 from "./lesson/05_메서드/03_날짜/03_날짜.jsx";
 import Index0508 from "./lesson/05_메서드/03_날짜/예제_05.jsx";
 import Index0509 from "./lesson/05_메서드/03_날짜/예제_06.jsx";
-import Index0510 from "./lesson/05_메서드/04_정규식/04_정규식";
+import Index0510 from "./lesson/05_메서드/04_정규식/04_정규식.jsx";
 import Index0511 from "./lesson/05_메서드/04_정규식/예제_07.jsx";
 import Index0512 from "./lesson/05_메서드/04_정규식/예제_08.jsx";
 
