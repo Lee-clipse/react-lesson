@@ -1,0 +1,30 @@
+body {
+  background-color: #282c34;
+  display: flex;
+  font-size: 20px;
+  color: white;
+}
+
+#lesson-title {
+  padding: 2rem;
+  font-weight: bold;
+  width: 100vw;
+  font-size: 30px;
+  border-bottom: 1px solid white;
+}
+
+#lesson-content {
+  padding: 2rem 2rem 2rem 2rem;
+
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 2rem 0 1rem 0;
+  }
+}
+
+.link-button {
+  color: #2faf91;
+  padding-left: 0.6rem;
+  cursor: pointer;
+}
