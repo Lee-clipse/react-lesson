@@ -1,0 +1,16 @@
+01
+const [taskInput, setTaskInput] = useState("");
+const [list, setList] = useState([]);
+function addList() {
+  setList([...list, taskInput]);
+  setTaskInput("");
+}
+
+list.map((task) => (
+  <div>{task}</div>
+))
+
+value={taskInput}
+onChange={(event) => setTaskInput(event.target.value)}
+
+onClick={() => addList()}

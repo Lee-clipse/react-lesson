@@ -1,0 +1,42 @@
+01
+const [message, setMessage] = useState("-");
+function doRender() {
+  setMessage("렌더링");
+}
+onClick={() => doRender()}
+
+02
+const [now, setNow] = useState("");
+function rerenderNow() {
+  setNow(new Date().toLocaleString("ko-KR"));
+}
+onClick={() => rerenderNow()}
+
+03
+X
+
+04
+function getLottoNumber() {
+  const newNumber = Math.floor(Math.random() * 45) + 1;
+  setLotto([...lotto, newNumber]);
+}
+onClick={() => getLottoNumber()}
+
+05
+setIsAdult(true);
+
+06
+const [id, setId] = useState("");
+const [pwd, setPwd] = useState("");
+const [isLogin, setIsLogin] = useState(false);
+function doLogin() {
+  if (id === "okok" && pwd === "okok") {
+    setIsLogin(true);
+  } else {
+    setIsLogin(false);
+  }
+}
+onChange={(event) => setId(event.target.value)} 
+onChange={(event) => setPwd(event.target.value)}
+onClick={() => doLogin()}
+{isLogin && "환영합니다!"}

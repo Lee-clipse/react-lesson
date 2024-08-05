@@ -5,6 +5,13 @@ function Home() {
     <div>
       <div id="lesson-title">React Lesson</div>
       <div id="lesson-content">
+        <div className="title">연습문제</div>
+        <div>
+          <a className="link-button" href="/0001">
+            문제_01
+          </a>
+        </div>
+
         <div className="title">01 상태</div>
         <div>
           <div>
@@ -52,6 +59,58 @@ function Home() {
           <div>
             [예제 06] 로그인{" "}
             <a className="link-button" href="/0107">
+              이동
+            </a>
+          </div>
+        </div>
+
+        <div className="title">02 렌더링</div>
+        <div>
+          <div>
+            [01 문법]{" "}
+            <a className="link-button" href="/0201">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 01] 렌더링 하기{" "}
+            <a className="link-button" href="/0202">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 02] 현재 시간 리렌더링{" "}
+            <a className="link-button" href="/0203">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 03] 구조 분해 할당{" "}
+            <a className="link-button" href="/0204">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 04] 자동 로또{" "}
+            <a className="link-button" href="/0205">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 05] 조건부 렌더링{" "}
+            <a className="link-button" href="/0206">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 06] 로그인{" "}
+            <a className="link-button" href="/0207">
               이동
             </a>
           </div>

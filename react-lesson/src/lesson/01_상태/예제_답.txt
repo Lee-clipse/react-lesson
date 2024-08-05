@@ -38,5 +38,3 @@ onChange={(event) => setId(event.target.value)}
 onChange={(event) => setPwd(event.target.value)}
 onClick={() => doLogin()}
 
-07
-
