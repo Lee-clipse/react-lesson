@@ -12,7 +12,7 @@ function Index0201() {
       <div id="lesson-title">렌더링</div>
       <div id="lesson-content">
         <div className="title">이론</div>
-        <a href="https://half-straw-a69.notion.site/01-b45842fd72564e3894e880b86f9afb52?pvs=4">
+        <a href="https://half-straw-a69.notion.site/02-87f36e12410340ad9c8831333767f4ba?pvs=4">
           이론 자료
         </a>
 
