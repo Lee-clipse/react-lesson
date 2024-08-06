@@ -11,6 +11,7 @@ function Index0001() {
 
   function addTodoList() {
     setTodoList([...todoList, todoString]);
+    setTodoString("");
   }
 
   return (
@@ -33,6 +34,7 @@ function Index0001() {
         <input
           type="text"
           placeholder="할 일"
+          value={todoString}
           onChange={(event) => handleTodoInput(event.target.value)}
         />
         <div className="link-button" onClick={() => addTodoList()}>
