@@ -5,11 +5,19 @@ function Index0107() {
   const [pwd, setPwd] = useState("");
 
   function doLogin() {
-    if (id === "okok" && pwd == "okok") {
+    if (id === "okok" && pwd === "okok") {
       alert("로그인 성공!");
     } else {
       alert("로그인 실패");
     }
+  }
+
+  function handleId(inputId) {
+    setId(inputId);
+  }
+
+  function handlePwd(inputPwd) {
+    setPwd(inputPwd);
   }
 
   return (
@@ -23,10 +31,20 @@ function Index0107() {
 
         <div className="title">답</div>
         <div>아이디</div>
-        <input type="text" placeholder="아이디" />
+        <input
+          type="text"
+          placeholder="아이디"
+          onChange={(event) => handleId(event.target.value)}
+        />
         <div>비밀번호</div>
-        <input type="text" placeholder="비밀번호" />
-        <div className="link-button">로그인</div>
+        <input
+          type="text"
+          placeholder="비밀번호"
+          onChange={(event) => handlePwd(event.target.value)}
+        />
+        <div className="link-button" onClick={() => doLogin()}>
+          로그인
+        </div>
       </div>
     </div>
   );

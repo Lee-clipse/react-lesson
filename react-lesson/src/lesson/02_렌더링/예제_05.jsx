@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 
 function Index0206() {
-  function checkIsAdult() {
-    const age = prompt("당신의 나이는?", "");
-    if (age >= 20) {
-    }
+  const [isAdult, setIsAdult] = useState(false);
+  const [age, setAge] = useState(0);
+
+  function handleInput(inputAge) {
+    setAge(inputAge);
   }
 
-  const [isAdult, setIsAdult] = useState(false);
+  function checkIsAdult() {
+    if (age >= 20) {
+      setIsAdult(true);
+    } else {
+      setIsAdult(false);
+    }
+  }
 
   return (
     <div>
@@ -18,10 +25,13 @@ function Index0206() {
         <div>20살 이상이라면 "성인입니다"를 조건부 렌더링하시오.</div>
 
         <div className="title">답</div>
+        <div>
+          <input type="text" onChange={(event) => handleInput(event.target.value)}></input>
+        </div>
         <div className="link-button" onClick={() => checkIsAdult()}>
           성인 인증
         </div>
-        <h1>{isAdult && "성인입니다"}</h1>
+        <h1>{isAdult ? "성인입니다" : "성인이 아닙니다"}</h1>
       </div>
     </div>
   );

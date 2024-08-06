@@ -2,6 +2,16 @@ import React, { useState } from "react";
 
 function Index0001() {
   // TODO
+  const [todoList, setTodoList] = useState([]);
+  const [todoString, setTodoString] = useState("");
+
+  function handleTodoInput(todoInput) {
+    setTodoString(todoInput);
+  }
+
+  function addTodoList() {
+    setTodoList([...todoList, todoString]);
+  }
 
   return (
     <div>
@@ -15,9 +25,19 @@ function Index0001() {
 
         <div className="title">답</div>
         <h3>할 일 목록</h3>
-        <div>{}</div>
-        <input type="text" placeholder="할 일" />
-        <div className="link-button">할 일 추가</div>
+        <div>
+          {todoList.map((todo) => {
+            return <div>할 일: {todo}</div>;
+          })}
+        </div>
+        <input
+          type="text"
+          placeholder="할 일"
+          onChange={(event) => handleTodoInput(event.target.value)}
+        />
+        <div className="link-button" onClick={() => addTodoList()}>
+          할 일 추가
+        </div>
       </div>
     </div>
   );

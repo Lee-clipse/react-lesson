@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 
 function Index0106() {
+  const [comment, setComment] = useState();
+
+  function typeComment(input) {
+    setComment(input);
+  }
+
   return (
     <div>
       <div id="lesson-title">조건문 - 예제 5: 실시간 댓글</div>
@@ -11,8 +17,8 @@ function Index0106() {
         <div>- 힌트: event.target.value</div>
 
         <div className="title">답</div>
-        <div>댓글: {}</div>
-        <input type="text" />
+        <div>댓글: {comment}</div>
+        <input type="text" onChange={(event) => typeComment(event.target.value)} />
       </div>
     </div>
   );

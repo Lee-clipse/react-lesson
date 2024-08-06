@@ -3,6 +3,16 @@ import React, { useState } from "react";
 function Index0205() {
   const [lotto, setLotto] = useState([]);
 
+  function getLottoNumber() {
+    const newNumber = Math.floor(Math.random() * 45) + 1;
+    if (lotto.length >= 6) {
+      return;
+    }
+    if (!lotto.includes(newNumber)) {
+      setLotto([...lotto, newNumber]);
+    }
+  }
+
   return (
     <div>
       <div id="lesson-title">조건문 - 예제 4: 자동 로또</div>
@@ -15,7 +25,9 @@ function Index0205() {
 
         <div className="title">답</div>
         <div>자동 로또: {lotto.map((num) => `${num}, `)}</div>
-        <div className="link-button">뽑기</div>
+        <div className="link-button" onClick={() => getLottoNumber()}>
+          뽑기
+        </div>
       </div>
     </div>
   );

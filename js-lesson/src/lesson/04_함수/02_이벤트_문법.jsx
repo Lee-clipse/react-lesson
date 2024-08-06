@@ -35,7 +35,7 @@ function Index0402() {
           type="text"
           name="text"
           placeholder="아무거나 입력"
-          onChange={(event) => alertInputText(event)}
+          onChange={(event) => alertInputText(event.target.value)}
         />
       </div>
     </div>
