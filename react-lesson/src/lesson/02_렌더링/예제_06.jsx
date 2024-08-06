@@ -2,6 +2,23 @@ import React, { useState } from "react";
 
 function Index0207() {
   // TODO
+  const [id, setId] = useState("");
+  const [pwd, setPwd] = useState("");
+  const [isLogin, setIsLogin] = useState(false);
+
+  function handaleId(inputId) {
+    setId(inputId);
+  }
+
+  function handalePwd(inputPwd) {
+    setPwd(inputPwd);
+  }
+
+  function handleLogin() {
+    if (id === "okok" && pwd === "okok") {
+      setIsLogin(true);
+    }
+  }
 
   return (
     <div>
@@ -10,18 +27,30 @@ function Index0207() {
         <div className="title">예제</div>
         <div>input 태그에 `onChange` 이벤트를 등록하여,</div>
         <div>아이디, 비밀번호로 로그인을 수행할 수 있도록 구현하시오.</div>
-        <div>로그인을 성공한다면, "환영합니다"를 h1 태그에 조건부 렌더링하시오.</div>
+        <div>
+          로그인을 성공한다면, "환영합니다"를 h1 태그에 조건부 렌더링하시오.
+        </div>
         <div>- 힌트: event.target.value</div>
 
         <div className="title">답</div>
         <div>아이디</div>
-        <input type="text" placeholder="아이디" />
+        <input
+          type="text"
+          placeholder="아이디"
+          onChange={(event) => handaleId(event.target.value)}
+        />
         <div>비밀번호</div>
-        <input type="text" placeholder="비밀번호" />
-        <div className="link-button">로그인</div>
+        <input
+          type="text"
+          placeholder="비밀번호"
+          onChange={(event) => handalePwd(event.target.value)}
+        />
+        <div className="link-button" onClick={() => handleLogin()}>
+          로그인
+        </div>
 
         {/* TODO */}
-        <h1>{}</h1>
+        <h1>{isLogin ? "환영합니다" : "비회원입니다"}</h1>
       </div>
     </div>
   );

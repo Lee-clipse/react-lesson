@@ -5,6 +5,7 @@ function Index0102() {
 
   function plusClick() {
     // TODO
+    setClick(click + 10);
   }
 
   return (
@@ -19,7 +20,9 @@ function Index0102() {
         <div>클릭 횟수: {click}</div>
 
         {/* TODO */}
-        <div className="link-button">클릭하기</div>
+        <div className="link-button" onClick={() => plusClick()}>
+          클릭하기
+        </div>
       </div>
     </div>
   );

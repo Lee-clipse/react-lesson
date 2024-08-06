@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 
 function Index0103() {
+  const [click, setClick] = useState(0);
+
+  function clickNumberPlus() {
+    setClick(click + 1);
+  }
+
   return (
     <div>
       <div id="lesson-title">조건문 - 예제 2: 클릭 카운팅 2</div>
@@ -12,8 +18,8 @@ function Index0103() {
 
         <div className="title">답</div>
         {/* TODO */}
-        <div>클릭 횟수: {}</div>
-        <div className="link-button">클릭하기</div>
+        <div>클릭 횟수: {click}</div>
+        <div className="link-button" onClick={() => clickNumberPlus()}>클릭하기</div>
       </div>
     </div>
   );

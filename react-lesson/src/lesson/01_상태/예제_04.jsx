@@ -1,6 +1,19 @@
 import React, { useState } from "react";
 
 function Index0105() {
+  const [ateam, setAteam] = useState(0);
+  const [bteam, setBteam] = useState(0);
+
+  function ateamGoal() {
+    if(ateam < 7){
+      setAteam(ateam + 1);
+    }
+  }
+
+  function bteamGoal() {
+    setBteam(bteam + 1);
+  }
+
   return (
     <div>
       <div id="lesson-title">조건문 - 예제 4: 탁구 심판</div>
@@ -12,10 +25,14 @@ function Index0105() {
 
         <div className="title">답</div>
         <div>
-          {} vs {}
+          {ateam} vs {bteam}
         </div>
-        <div className="link-button">A팀 득점</div>
-        <div className="link-button">B팀 득점</div>
+        <div className="link-button" onClick={() => ateamGoal()}>
+          A팀 득점
+        </div>
+        <div className="link-button" onClick={() => bteamGoal()}>
+          B팀 득점
+        </div>
       </div>
     </div>
   );

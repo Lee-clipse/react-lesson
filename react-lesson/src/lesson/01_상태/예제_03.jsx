@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 
 function Index0104() {
+  const [customer, setCustomer] = useState(20);
+
+  function 입장() {
+    setCustomer(customer + 1);
+  }
+
+  function 퇴장() {
+    setCustomer(customer - 1);
+  }
+
   return (
     <div>
       <div id="lesson-title">조건문 - 예제 3: 손님 카운팅</div>
@@ -14,9 +24,13 @@ function Index0104() {
         <div>현 시점에 가게 손님 수는 20명이다.</div>
 
         <div className="title">답</div>
-        <div>현재 가게에 손님: {}</div>
-        <div className="link-button">손님 입장</div>
-        <div className="link-button">손님 퇴장</div>
+        <div>현재 가게에 손님: {customer}</div>
+        <div className="link-button" onClick={() => 입장()}>
+          손님 입장
+        </div>
+        <div className="link-button" onClick={() => 퇴장()}>
+          손님 퇴장
+        </div>
       </div>
     </div>
   );
