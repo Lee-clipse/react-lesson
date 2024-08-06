@@ -16,6 +16,7 @@ import Index0205 from "./lesson/02_렌더링/예제_04.jsx";
 import Index0206 from "./lesson/02_렌더링/예제_05.jsx";
 import Index0207 from "./lesson/02_렌더링/예제_06.jsx";
 import Index0001 from "./lesson/연습문제/문제_01.jsx";
+import Index1009 from "./lesson/연습문제/놀이터.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
 
+        <Route path="/9999" element={<Index1009 />}></Route>
         <Route path="/0001" element={<Index0001 />}></Route>
 
         <Route path="/0101" element={<Index0101 />}></Route>

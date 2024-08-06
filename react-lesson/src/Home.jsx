@@ -7,6 +7,12 @@ function Home() {
       <div id="lesson-content">
         <div className="title">연습문제</div>
         <div>
+          <a className="link-button" href="/9999">
+            놀이터
+          </a>
+        </div>
+        <div className="title">연습문제</div>
+        <div>
           <a className="link-button" href="/0001">
             문제_01
           </a>
