@@ -167,6 +167,30 @@ function Home() {
             </a>
           </div>
         </div>
+
+        <div className="title">04 스타일</div>
+        <div>
+          <div>
+            [01 문법]{" "}
+            <a className="link-button" href="/0401">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 01] styled 색 입히기
+            <a className="link-button" href="/0402">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 02] bootstrap 색 입히기
+            <a className="link-button" href="/0403">
+              이동
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

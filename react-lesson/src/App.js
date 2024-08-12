@@ -22,6 +22,9 @@ import Index0304 from "./lesson/03_컴포넌트/예제_03.jsx";
 import Index0305 from "./lesson/03_컴포넌트/예제_04.jsx";
 import Index0306 from "./lesson/03_컴포넌트/예제_05.jsx";
 import Index0307 from "./lesson/03_컴포넌트/예제_06.jsx";
+import Index0401 from "./lesson/04_스타일/01_문법.jsx";
+import Index0402 from "./lesson/04_스타일/예제_01.jsx";
+import Index0403 from "./lesson/04_스타일/예제_02.jsx";
 import Index0001 from "./lesson/연습문제/문제_01.jsx";
 
 function App() {
@@ -55,6 +58,10 @@ function App() {
         <Route path="/0305" element={<Index0305 />}></Route>
         <Route path="/0306" element={<Index0306 />}></Route>
         <Route path="/0307" element={<Index0307 />}></Route>
+
+        <Route path="/0401" element={<Index0401 />}></Route>
+        <Route path="/0402" element={<Index0402 />}></Route>
+        <Route path="/0403" element={<Index0403 />}></Route>
       </Routes>
     </BrowserRouter>
   );
