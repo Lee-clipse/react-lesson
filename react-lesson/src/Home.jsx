@@ -115,6 +115,58 @@ function Home() {
             </a>
           </div>
         </div>
+
+        <div className="title">03 컴포넌트</div>
+        <div>
+          <div>
+            [01 문법]{" "}
+            <a className="link-button" href="/0301">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 01] 컴포넌트 렌더링
+            <a className="link-button" href="/0302">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 02] 컴포넌트 props 1
+            <a className="link-button" href="/0303">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 03] 컴포넌트 props 2
+            <a className="link-button" href="/0304">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 04] 컴포넌트 조건부 렌더링
+            <a className="link-button" href="/0305">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 05] 나이 검사
+            <a className="link-button" href="/0306">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 06] 로그인
+            <a className="link-button" href="/0307">
+              이동
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
