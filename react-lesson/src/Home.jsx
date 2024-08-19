@@ -5,6 +5,13 @@ function Home() {
     <div>
       <div id="lesson-title">React Lesson</div>
       <div id="lesson-content">
+        <div className="title">실습</div>
+        <div>
+          <a className="link-button" href="/1001">
+            01_장바구니
+          </a>
+        </div>
+
         <div className="title">연습문제</div>
         <div>
           <a className="link-button" href="/0001">
