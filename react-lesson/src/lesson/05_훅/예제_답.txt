@@ -1,0 +1,11 @@
+03
+function handleInputIndex(value) {
+  setIndex(Number(value));
+}
+onChange={(e) => handleInputIndex(e.target.value)}
+<NumberBox index={index} />
+
+
+useEffect(() => {
+  setNumber(index);
+}, [index]);
