@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NumberBox from "./Components/NumberBox";
 
 function Index0504() {
   const [index, setIndex] = useState(0);
+
+  function handleNumber(input) {
+    setIndex(input);
+  }
 
   return (
     <div>
@@ -14,8 +18,12 @@ function Index0504() {
         <div>박스 컴포넌트에게 props로 데이터를 전달하시오.</div>
         <div>박스 컴포넌트는 useEffect로 데이터를 렌더링하도록 구현하시오.</div>
 
-        <input type="text" />
+        <input
+          type="text"
+          onChange={(event) => handleNumber(event.target.value)}
+        />
         <div className="title">답</div>
+        <NumberBox index={index} />
       </div>
     </div>
   );

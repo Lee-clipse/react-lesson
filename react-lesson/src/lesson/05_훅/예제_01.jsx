@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function Index0502() {
   // TODO
+
+  useEffect(() => {
+    console.log("Hello World");
+  }, []);
 
   return (
     <div>

@@ -2,30 +2,30 @@ import React, { useEffect, useState } from "react";
 import { Wrapper } from "./style";
 
 function ShoppingCart({ productData }) {
-  const [shoppingCart, setShoppingCart] = useState(productData);
-  const [purchaseSum, setPurchaseSum] = useState(0);
+  const [shoppingCart, setShoppingCart] = useState([]);
+  const [priceSum, setPriceSum] = useState(0);
 
   useEffect(() => {
     setShoppingCart(productData);
-    calcProductSum(productData);
+    productPrice();
   }, [productData]);
 
-  function calcProductSum(productData) {
+  function handlePurchase() {
+    alert(`$ 결제가 완료되었습니다!`);
+    window.location.reload();
+  }
+
+  function productPrice() {
     let sum = 0;
     productData.map((product) => {
       sum += product.price * product.quantity;
     });
-    setPurchaseSum(sum);
-  }
-
-  function handlePurchase() {
-    alert(`$${purchaseSum.toFixed(2)} 결제가 완료되었습니다!`);
-    window.location.reload();
+    setPriceSum(sum);
   }
 
   return (
     <Wrapper>
-      <div id="list">
+      <div id="list">```
         {shoppingCart &&
           shoppingCart.map((product) => {
             return (
@@ -36,7 +36,9 @@ function ShoppingCart({ productData }) {
                   <div>
                     {product.quantity}개 / 개당 ${product.price}
                   </div>
-                  <div>합계: ${(product.price * product.quantity).toFixed(2)}</div>
+                  <div>
+                    합계: ${(product.price * product.quantity).toFixed(2)}
+                  </div>
                 </div>
               </div>
             );
@@ -44,12 +46,12 @@ function ShoppingCart({ productData }) {
       </div>
 
       <div id="purchase-box">
-        <div id="p-title">합계: ${purchaseSum}</div>
-        {purchaseSum && (
+        <div id="p-title">합계: ${priceSum.toFixed(2)}</div>
+        {
           <div id="p-btn" onClick={() => handlePurchase()}>
             결제하기
           </div>
-        )}
+        }
       </div>
     </Wrapper>
   );

@@ -1,6 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import LoginSuccess from "./Components/LoginSuccess";
+import LoginFailed from "./Components/LoginFailed";
 
 function Index0307() {
+  const [id, setId] = useState("");
+  const [pwd, setPwd] = useState("");
+  const [user, setUser] = useState(false);
+
+  function handleId(value) {
+    setId(value);
+  }
+
+  function handlePwd(value) {
+    setPwd(value);
+  }
+
+  function handleClick() {
+    if (id === "okok" && pwd === "okok") {
+      setUser(true);
+    } else {
+      setUser(false);
+    }
+  }
+
   return (
     <div>
       <div id="lesson-title">예제 6: 로그인</div>
@@ -13,15 +35,24 @@ function Index0307() {
 
         <div className="title">답</div>
         <div>아이디</div>
-        <input type="text" placeholder="아이디" />
+        <input
+          type="text"
+          placeholder="아이디"
+          onChange={(event) => handleId(event.target.value)}
+        />
         <div>비밀번호</div>
-        <input type="text" placeholder="비밀번호" />
-        <div className="link-button"></div>
+        <input
+          type="text"
+          placeholder="비밀번호"
+          onChange={(event) => handlePwd(event.target.value)}
+        />
 
-        <div className="link-button">로그인</div>
+        <div className="link-button" onClick={() => handleClick()}>
+          로그인
+        </div>
 
         {/* TODO */}
-        <div>로그인 결과: </div>
+        <div>로그인 결과: {user ? <LoginSuccess /> : <LoginFailed />}</div>
       </div>
     </div>
   );

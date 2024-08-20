@@ -6,6 +6,9 @@ function Index0503() {
   const [data, setData] = useState("");
 
   // TODO
+  useEffect(() => {
+    setData(서버_데이터);
+  }, []);
 
   return (
     <div>

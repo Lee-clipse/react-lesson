@@ -11,15 +11,18 @@ function Work0001() {
   const [viewModal, setViewModal] = useState(false);
   const [quantity, setQuantity] = useState(1);
 
-  function handleSelectProduct(product) {
+  function handleModal(product) {
     setSelectProduct(product);
     setViewModal(true);
   }
 
-  function handleAddProduct() {
+  function cartListUp() {
+    // 상품의 수량 변경
     selectProduct.quantity = quantity;
     setQuantity(1);
+
     setShoppingCart([...shoppingCart, selectProduct]);
+
     setViewModal(false);
   }
 
@@ -30,7 +33,7 @@ function Work0001() {
           <div id="back-drop"></div>
           <div id="m-wrapper">
             <div id="m-header">
-              <img src={CloseIcon} alt="" onClick={() => setViewModal(false)} />
+              <img src={CloseIcon} onClick={() => setViewModal(false)} />
             </div>
             <div id="m-body">
               <img src={selectProduct.image} alt="" />
@@ -40,11 +43,11 @@ function Work0001() {
                 <span>수량</span>
                 <input
                   type="text"
+                  onChange={(event) => setQuantity(event.target.value)}
                   value={quantity}
-                  onChange={(e) => setQuantity(Number(e.target.value))}
                 />
               </div>
-              <div className="m-btn" onClick={() => handleAddProduct()}>
+              <div className="m-btn" onClick={() => cartListUp()}>
                 장바구니 담기
               </div>
             </div>
@@ -52,10 +55,10 @@ function Work0001() {
         </Modal>
       )}
 
+      <ShoppingCart productData={shoppingCart} />
+
       <Wrapper>
         <div id="title">메인 페이지</div>
-
-        <ShoppingCart productData={shoppingCart} />
 
         <div id="list">
           {ProductList.map((product) => {
@@ -63,7 +66,7 @@ function Work0001() {
               <div
                 className="p-box"
                 key={product.index}
-                onClick={() => handleSelectProduct(product)}
+                onClick={() => handleModal(product)}
               >
                 <img src={product.image} alt="" />
                 <div className="p-title">{product.title}</div>
