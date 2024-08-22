@@ -8,7 +8,8 @@ export function requestNowTime() {
   return result;
 }
 
-// GET
+// GET 요청
+// 예제 01번
 export function requestUserLogin(id, pwd) {
   if (id === "okok" && pwd === "okok") {
     return {
@@ -26,7 +27,8 @@ export function requestUserLogin(id, pwd) {
   };
 }
 
-// POST
+// POST 요청
+// 예제 02번
 export function requestProductEnter(rpNumber, zone) {
   return {
     code: 200,
@@ -38,7 +40,8 @@ export function requestProductEnter(rpNumber, zone) {
   };
 }
 
-// GET
+// GET 요청
+// 예제 03번
 export function requestEveryUser() {
   return {
     code: 200,
@@ -52,7 +55,8 @@ export function requestEveryUser() {
   };
 }
 
-// POST
+// POST 요청
+// 예제 03번
 export function requestAddPoint(name, point) {
   return {
     code: 200,

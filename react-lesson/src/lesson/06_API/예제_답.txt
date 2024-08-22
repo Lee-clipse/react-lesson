@@ -6,3 +6,18 @@ setLoginResult(loginSign);
 02
 const result = requestProductEnter(rpNumber, zone);
 console.log(result.data);
+
+03
+useEffect(() => {
+  fetchUserList();
+}, []);
+
+function fetchUserList() {
+  const result = requestEveryUser();
+  setUserList(result.data);
+}
+onClick={() => handleAddPoint(user)}
+function handleAddPoint(user) {
+  const result = requestAddPoint(user.name, point);
+  console.log(result.data);
+}
