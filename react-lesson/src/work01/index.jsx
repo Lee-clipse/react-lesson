@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Modal, Wrapper } from "./style.js";
-import { ProductList } from "./const.js";
 import CloseIcon from "./images/close.png";
 import ShoppingCart from "./Components/ShoppingCart/index.jsx";
+import { requestEveryProduct } from "./api.js";
 
 function Work0001() {
+  // TODO
+  const [productList, setProductList] = useState([]);
+
   const [selectProduct, setSelectProduct] = useState({});
   const [shoppingCart, setShoppingCart] = useState([]);
 
@@ -21,6 +24,16 @@ function Work0001() {
     setQuantity(1);
     setShoppingCart([...shoppingCart, selectProduct]);
     setViewModal(false);
+  }
+
+  // TODO
+  useEffect(() => {
+    fetchProductList();
+  }, []);
+
+  function fetchProductList() {
+    const result = requestEveryProduct();
+    setProductList(result.data);
   }
 
   return (
@@ -58,7 +71,8 @@ function Work0001() {
         <ShoppingCart productData={shoppingCart} />
 
         <div id="list">
-          {ProductList.map((product) => {
+          {/* TODO */}
+          {productList.map((product) => {
             return (
               <div
                 className="p-box"
