@@ -1,0 +1,8 @@
+01
+const result = requestUserLogin(id, pwd);
+const loginSign = result.data.sign;
+setLoginResult(loginSign);
+
+02
+const result = requestProductEnter(rpNumber, zone);
+console.log(result.data);

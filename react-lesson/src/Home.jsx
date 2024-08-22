@@ -209,22 +209,53 @@ function Home() {
           </div>
 
           <div>
-            [예제 01]{" "}
+            [예제 01] 새로고침{" "}
             <a className="link-button" href="/0502">
               이동
             </a>
           </div>
 
           <div>
-            [예제 02]{" "}
+            [예제 02] API 호출{" "}
             <a className="link-button" href="/0503">
               이동
             </a>
           </div>
 
           <div>
-            [예제 03]{" "}
+            [예제 03] props 호출{" "}
             <a className="link-button" href="/0504">
+              이동
+            </a>
+          </div>
+        </div>
+
+        <div className="title">06 API</div>
+        <div>
+          <div>
+            [01 문법]{" "}
+            <a className="link-button" href="/0601">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 01] 로그인{" "}
+            <a className="link-button" href="/0602">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 02] 입고 등록{" "}
+            <a className="link-button" href="/0603">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 03] 전체 사용자 포인트 지급{" "}
+            <a className="link-button" href="/0604">
               이동
             </a>
           </div>

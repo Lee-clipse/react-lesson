@@ -44,7 +44,7 @@ function ShoppingCart({ productData }) {
       </div>
 
       <div id="purchase-box">
-        <div id="p-title">합계: ${purchaseSum}</div>
+        <div id="p-title">합계: ${purchaseSum.toFixed(2)}</div>
         {purchaseSum && (
           <div id="p-btn" onClick={() => handlePurchase()}>
             결제하기
