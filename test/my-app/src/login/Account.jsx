@@ -5,79 +5,65 @@ const Account = () => {
   const [pwd, setPwd] = useState("");
   const [name, setName] = useState("");
 
+  function joinUs() {
+    const userInfo = { id, pwd, name };
+    // userList 배열을 localStorage에서 가져옴 (기존 유저리스트가 없으면 빈 배열로 초기화)
+    const storedUserList = JSON.parse(localStorage.getItem("userList")) || [];
+    
+    // 새 회원 정보를 추가
+    storedUserList.push(userInfo);
+
+    // localStorage에 userList를 저장
+    localStorage.setItem("userList", JSON.stringify(storedUserList));
+
+    alert("회원가입이 완료 되었어요 !");
+    window.location.href = "/0001";  // 로그인 페이지로 이동
+  }
+
   return (
     <div>
-      <div class="container">
-        <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <div class="pt-4 pb-2">
-                      <h5 class="card-title text-center pb-0 fs-4">회원가입</h5>
+      <div className="container">
+        <section className="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="d-flex  align-items-center justify-content-center">
+                <div className="card">
+                  <div className="card-body">
+                    <a href="/">
+                      <h5 className="fw-bold card-title">K_ollabo 회원가입</h5>
+                    </a>
+                    <div className="input-group mb-3">
+                      <span className="input-group-text">ID</span>
+                      <input
+                        type="text"
+                        className="form-control"
+                        onChange={(event) => setId(event.target.value)}
+                      ></input>
+                    </div>
+                    <div className="input-group mb-3">
+                      <span className="input-group-text">PWD</span>
+                      <input
+                        type="text"
+                        className="form-control"
+                        onChange={(event) => setPwd(event.target.value)}
+                      ></input>
+                    </div>
+                    <div className="input-group mb-3">
+                      <span className="input-group-text">Your name</span>
+                      <input
+                        type="text"
+                        className="form-control"
+                        onChange={(event) => setName(event.target.value)}
+                      ></input>
                     </div>
 
-                    <form class="row g-3 needs-validation" novalidate>
-                      <div class="col-12">
-                        <label for="yourUsername" class="form-label">
-                          Id
-                        </label>
-                        <div class="input-group has-validation">
-                          <input
-                            type="text"
-                            name="username"
-                            class="form-control"
-                            id="yourUsername"
-                            required
-                            onChange={(event) => setId(event.target.value)}
-                          ></input>
-                          <div class="invalid-feedback">
-                            Please enter your username.
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-12">
-                        <label for="yourPassword" class="form-label">
-                          Password
-                        </label>
-                        <input
-                          type="password"
-                          name="password"
-                          class="form-control"
-                          id="yourPassword"
-                          required
-                          onChange={(event) => setPwd(event.target.value)}
-                        ></input>
-                        <div class="invalid-feedback">
-                          Please enter your password!
-                        </div>
-                      </div>
-
-                      <div class="col-12">
-                        <label for="yourName" class="form-label">
-                          Name
-                        </label>
-                        <input
-                          type="text"
-                          name="name"
-                          class="form-control"
-                          id="yourName"
-                          required
-                          onChange={(event) => setName(event.target.value)}
-                        ></input>
-                        <div class="invalid-feedback">
-                          Please enter your password!
-                        </div>
-                      </div>
-
-                      <div class="col-12">
-                        <button class="btn btn-primary w-100" type="submit">
-                          Join Us
-                        </button>
-                      </div>
-                    </form>
+                    <button
+                      className="btn btn-outline-success col-12"
+                      onClick={() => joinUs()}
+                    >
+                      JoinUs
+                    </button>
+                    <a href="/0001">Login</a>
                   </div>
                 </div>
               </div>

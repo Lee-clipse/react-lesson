@@ -3,14 +3,17 @@ import React, { useState } from "react";
 const Main = () => {
   return (
     <div>
-      <header id="header" class="header fixed-top d-flex align-items-center">
-        <div class="d-flex align-items-center justify-content-between">
-          <a href="#" class="logo d-flex align-items-center">
-            <span class="d-none d-lg-block">K_ollabo</span>
+      <header
+        id="header"
+        className="header fixed-top d-flex align-items-center"
+      >
+        <div className="d-flex align-items-center justify-content-between">
+          <a href="#" className="logo d-flex align-items-center">
+            <span className="d-none d-lg-block">K_ollabo</span>
           </a>
         </div>
 
-        <nav class="header-nav ms-auto me-3">
+        <nav className="header-nav ms-auto me-3">
           <a href="/0001">Login</a>
         </nav>
       </header>

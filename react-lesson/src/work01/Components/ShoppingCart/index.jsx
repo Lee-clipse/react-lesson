@@ -25,7 +25,7 @@ function ShoppingCart({ productData }) {
 
   return (
     <Wrapper>
-      <div id="list">```
+      <div id="list">
         {shoppingCart &&
           shoppingCart.map((product) => {
             return (
