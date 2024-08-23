@@ -176,7 +176,7 @@ const Customer = () => {
           <li className="nav-heading">Pages</li>
 
           <li className="nav-item">
-            <a className="nav-link collapsed" href="#">
+            <a className="nav-link collapsed" href="/0004">
               <i className="bi bi-person"></i>
               <span>작동안함</span>
             </a>

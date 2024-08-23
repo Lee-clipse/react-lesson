@@ -50,18 +50,6 @@ const Login = () => {
                       Login
                     </button>
                     <a href="/0002">회원가입</a>
-
-                    {/* 저장된 유저리스트 출력 */}
-                    <div className="mt-4">
-                      <h6>Registered Users:</h6>
-                      <ul>
-                        {userList.map((user, index) => (
-                          <li key={index}>
-                            {user.name} (ID: {user.id})
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
                   </div>
                 </div>
               </div>
