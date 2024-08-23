@@ -18,6 +18,17 @@ const Customer = () => {
 
   /* 상품정보 선택 */
   const [selectProduct, setSelectProduct] = useState({});
+  const [shoppingCart, setShoppingCart] = useState([]);
+  const [productSum, setProductSum] = useState(0);
+  const [totalPrice, setTotalPrice] = useState([]);
+
+  function cartListUp() {
+    setShoppingCart([...shoppingCart, selectProduct]);
+    setProductSum(selectProduct.price * productEa);
+    setTotalPrice([...totalPrice, productSum]);
+    setShowModal(false);
+    setShowCart(true);
+  }
 
   /* 상품수량 선택 */
   const [productEa, setProdctEa] = useState(0);
@@ -37,6 +48,14 @@ const Customer = () => {
   const [showCart, setShowCart] = useState(false);
   const handleCloseCart = () => setShowCart(false);
   const handleShowCart = () => setShowCart(true);
+
+  function payment() {
+    let sum = 0;
+    totalPrice.map((price) => {
+      sum += price;
+    });
+    return alert("$" + sum.toFixed(2) + "결제가 완료되었습니다.");
+  }
 
   return (
     <div>
@@ -125,7 +144,7 @@ const Customer = () => {
           <li className="nav-item">
             <a className="nav-link " href="#">
               <i className="bi bi-grid"></i>
-              <span>Dashboard</span>
+              <span>작동안함</span>
             </a>
           </li>
 
@@ -137,7 +156,7 @@ const Customer = () => {
               href="#"
             >
               <i className="bi bi-menu-button-wide"></i>
-              <span>Components</span>
+              <span>작동안함</span>
               <i className="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul
@@ -148,7 +167,7 @@ const Customer = () => {
               <li>
                 <a href="#">
                   <i className="bi bi-circle"></i>
-                  <span>Alerts</span>
+                  <span>작동안함</span>
                 </a>
               </li>
             </ul>
@@ -159,7 +178,7 @@ const Customer = () => {
           <li className="nav-item">
             <a className="nav-link collapsed" href="#">
               <i className="bi bi-person"></i>
-              <span>Profile</span>
+              <span>작동안함</span>
             </a>
           </li>
         </ul>
@@ -167,16 +186,19 @@ const Customer = () => {
 
       {/*MainContent*/}
       <main id="main" className="main">
-        <div variant="primary">
+        <div className="row">
           {ProductList.map((product) => {
             return (
-              <div
-                className="card-body"
-                key={product.index}
-                onClick={() => handleShowModal(product)}
-              >
-                <div className="p-title">{product.title}</div>
-                <div className="p-price">${product.price}</div>
+              <div className="card col-3 m-1 btn rounded-4">
+                <div
+                  className="card-body"
+                  key={product.index}
+                  onClick={() => handleShowModal(product)}
+                >
+                  <img src={product.image}></img>
+                  <div className="p-price fw-bold fs-5">${product.price}</div>
+                  <div className="p-title small">{product.title}</div>
+                </div>
               </div>
             );
           })}
@@ -212,7 +234,7 @@ const Customer = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary">
+          <Button variant="primary" onClick={() => cartListUp()}>
             장바구니 담기 <i className=" bi bi-cart"></i>
           </Button>
         </Modal.Footer>
@@ -225,7 +247,29 @@ const Customer = () => {
             장바구니 <i className="bi bi-cart"></i>
           </Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body></Offcanvas.Body>
+        <Offcanvas.Body>
+          <div className="row">
+            {shoppingCart.map((prodcut) => {
+              return (
+                <div>
+                  <div className="col-2">
+                    <img src={prodcut.image} className="card-img"></img>
+                  </div>
+                  <div className="col-10">
+                    <div className="small">{prodcut.title}</div>
+                    <div className="fw-bold">단가 : ${prodcut.price}</div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <button
+            className="btn col-12 btn-outline-success"
+            onClick={() => payment()}
+          >
+            결제하기
+          </button>
+        </Offcanvas.Body>
       </Offcanvas>
     </div>
   );
