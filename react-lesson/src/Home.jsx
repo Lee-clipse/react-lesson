@@ -7,9 +7,17 @@ function Home() {
       <div id="lesson-content">
         <div className="title">실습</div>
         <div>
-          <a className="link-button" href="/1001">
-            01_장바구니
-          </a>
+          <div>
+            <a className="link-button" href="/1001">
+              01_장바구니
+            </a>
+          </div>
+
+          <div>
+            <a className="link-button" href="/1002">
+              02_배송료_계산기
+            </a>
+          </div>
         </div>
 
         <div className="title">연습문제</div>

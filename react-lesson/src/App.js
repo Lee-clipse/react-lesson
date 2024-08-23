@@ -35,6 +35,7 @@ import Index0603 from "./lesson/06_API/예제_02.jsx";
 import Index0604 from "./lesson/06_API/예제_03.jsx";
 import Index0001 from "./lesson/연습문제/문제_01.jsx";
 import Work0001 from "./work01/index.jsx";
+import Work0002 from "./work02/index.jsx";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
 
         <Route path="/1001" element={<Work0001 />}></Route>
+        <Route path="/1002" element={<Work0002 />}></Route>
 
         <Route path="/0001" element={<Index0001 />}></Route>
 

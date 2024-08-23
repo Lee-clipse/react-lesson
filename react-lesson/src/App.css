@@ -27,3 +27,13 @@ body {
   color: #2faf91;
   cursor: pointer;
 }
+
+.f-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.f-row {
+  display: flex;
+  flex-direction: row;
+}
