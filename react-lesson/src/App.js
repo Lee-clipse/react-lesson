@@ -36,6 +36,8 @@ import Index0604 from "./lesson/06_API/예제_03.jsx";
 import Index0001 from "./lesson/연습문제/문제_01.jsx";
 import Work0001 from "./work01/index.jsx";
 import Work0002 from "./work02/index.jsx";
+import Index0701 from "./lesson/07_라우팅/01_문법.jsx";
+import Index0801 from "./lesson/08_쿠키/01_문법.jsx";
 
 function App() {
   return (
@@ -85,6 +87,10 @@ function App() {
         <Route path="/0602" element={<Index0602 />}></Route>
         <Route path="/0603" element={<Index0603 />}></Route>
         <Route path="/0604" element={<Index0604 />}></Route>
+
+        <Route path="/0701" element={<Index0701 />}></Route>
+
+        <Route path="/0801" element={<Index0801 />}></Route>
       </Routes>
     </BrowserRouter>
   );

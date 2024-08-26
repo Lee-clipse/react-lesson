@@ -268,6 +268,26 @@ function Home() {
             </a>
           </div>
         </div>
+
+        <div className="title">07 라우팅</div>
+        <div>
+          <div>
+            [01 문법]{" "}
+            <a className="link-button" href="/0701">
+              이동
+            </a>
+          </div>
+        </div>
+
+        <div className="title">08 쿠키</div>
+        <div>
+          <div>
+            [01 문법]{" "}
+            <a className="link-button" href="/0801">
+              이동
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
