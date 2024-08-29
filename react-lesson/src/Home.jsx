@@ -288,6 +288,37 @@ function Home() {
             </a>
           </div>
         </div>
+
+        <div className="title">09 자료구조</div>
+        <div>
+          <div>
+            [01 목차]{" "}
+            <a className="link-button" href="/0901">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 01] 사용자 데이터
+            <a className="link-button" href="/0902">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 02]{" "}
+            <a className="link-button" href="/0903">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 03]{" "}
+            <a className="link-button" href="/0904">
+              이동
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
