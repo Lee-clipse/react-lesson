@@ -299,22 +299,50 @@ function Home() {
           </div>
 
           <div>
-            [예제 01] 사용자 데이터
+            [예제 01] 이미지 DB
             <a className="link-button" href="/0902">
               이동
             </a>
           </div>
 
           <div>
-            [예제 02]{" "}
+            [예제 02] 학생 성적 DB
             <a className="link-button" href="/0903">
               이동
             </a>
           </div>
 
           <div>
-            [예제 03]{" "}
+            [예제 03] 햄버거 DB
             <a className="link-button" href="/0904">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 04] 아이스크림 딱 하나
+            <a className="link-button" href="/0905">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 05] 만원의 행복
+            <a className="link-button" href="/0906">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 06] 사용자 DB
+            <a className="link-button" href="/0907">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 07] 도서관 DB
+            <a className="link-button" href="/0908">
               이동
             </a>
           </div>

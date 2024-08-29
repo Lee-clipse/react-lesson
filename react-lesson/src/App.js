@@ -42,6 +42,10 @@ import Index0901 from "./lesson/09_자료구조/01_문법.jsx";
 import Index0902 from "./lesson/09_자료구조/예제_01.jsx";
 import Index0903 from "./lesson/09_자료구조/예제_02.jsx";
 import Index0904 from "./lesson/09_자료구조/예제_03.jsx";
+import Index0905 from "./lesson/09_자료구조/예제_04.jsx";
+import Index0906 from "./lesson/09_자료구조/예제_05.jsx";
+import Index0907 from "./lesson/09_자료구조/예제_06.jsx";
+import Index0908 from "./lesson/09_자료구조/예제_07.jsx";
 
 function App() {
   return (
@@ -100,6 +104,10 @@ function App() {
         <Route path="/0902" element={<Index0902 />}></Route>
         <Route path="/0903" element={<Index0903 />}></Route>
         <Route path="/0904" element={<Index0904 />}></Route>
+        <Route path="/0905" element={<Index0905 />}></Route>
+        <Route path="/0906" element={<Index0906 />}></Route>
+        <Route path="/0907" element={<Index0907 />}></Route>
+        <Route path="/0908" element={<Index0908 />}></Route>
       </Routes>
     </BrowserRouter>
   );
