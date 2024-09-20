@@ -46,6 +46,17 @@ import Index0905 from "./lesson/09_자료구조/예제_04.jsx";
 import Index0906 from "./lesson/09_자료구조/예제_05.jsx";
 import Index0907 from "./lesson/09_자료구조/예제_06.jsx";
 import Index0908 from "./lesson/09_자료구조/예제_07.jsx";
+import Index1001 from "./lesson/10_인자/01_문법.jsx";
+import Index1002 from "./lesson/10_인자/예제_01.jsx";
+import Index1003 from "./lesson/10_인자/예제_02.jsx";
+import Index1004 from "./lesson/10_인자/예제_03.jsx";
+import Index1005 from "./lesson/10_인자/예제_04.jsx";
+import Index1006 from "./lesson/10_인자/예제_05.jsx";
+import Index1007 from "./lesson/10_인자/예제_06.jsx";
+import Index1008 from "./lesson/10_인자/예제_07.jsx";
+import Index1009 from "./lesson/10_인자/예제_08.jsx";
+import Index1010 from "./lesson/10_인자/예제_09.jsx";
+import Work0003 from "./work03/index.jsx";
 
 function App() {
   return (
@@ -53,8 +64,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
 
-        <Route path="/1001" element={<Work0001 />}></Route>
-        <Route path="/1002" element={<Work0002 />}></Route>
+        <Route path="/10001" element={<Work0001 />}></Route>
+        <Route path="/10002" element={<Work0002 />}></Route>
+        <Route path="/10003" element={<Work0003 />}></Route>
 
         <Route path="/0001" element={<Index0001 />}></Route>
 
@@ -108,6 +120,17 @@ function App() {
         <Route path="/0906" element={<Index0906 />}></Route>
         <Route path="/0907" element={<Index0907 />}></Route>
         <Route path="/0908" element={<Index0908 />}></Route>
+
+        <Route path="/1001" element={<Index1001 />}></Route>
+        <Route path="/1002" element={<Index1002 />}></Route>
+        <Route path="/1003" element={<Index1003 />}></Route>
+        <Route path="/1004" element={<Index1004 />}></Route>
+        <Route path="/1005" element={<Index1005 />}></Route>
+        <Route path="/1006" element={<Index1006 />}></Route>
+        <Route path="/1007" element={<Index1007 />}></Route>
+        <Route path="/1008" element={<Index1008 />}></Route>
+        <Route path="/1009" element={<Index1009 />}></Route>
+        <Route path="/1010" element={<Index1010 />}></Route>
       </Routes>
     </BrowserRouter>
   );

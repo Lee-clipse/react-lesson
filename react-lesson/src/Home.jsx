@@ -8,14 +8,20 @@ function Home() {
         <div className="title">실습</div>
         <div>
           <div>
-            <a className="link-button" href="/1001">
+            <a className="link-button" href="/10001">
               01_장바구니
             </a>
           </div>
 
           <div>
-            <a className="link-button" href="/1002">
+            <a className="link-button" href="/10002">
               02_배송료_계산기
+            </a>
+          </div>
+
+          <div>
+            <a className="link-button" href="/10003">
+              03_노트_앱
             </a>
           </div>
         </div>
@@ -343,6 +349,79 @@ function Home() {
           <div>
             [예제 07] 도서관 DB
             <a className="link-button" href="/0908">
+              이동
+            </a>
+          </div>
+        </div>
+
+        <div className="title">10 인자</div>
+        <div>
+          <div>
+            [01 목차]{" "}
+            <a className="link-button" href="/1001">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 01]
+            <a className="link-button" href="/1002">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 02]
+            <a className="link-button" href="/1003">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 03]
+            <a className="link-button" href="/1004">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 04]
+            <a className="link-button" href="/1005">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 05]
+            <a className="link-button" href="/1006">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 06]
+            <a className="link-button" href="/1007">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 07]
+            <a className="link-button" href="/1008">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 08]
+            <a className="link-button" href="/1009">
+              이동
+            </a>
+          </div>
+
+          <div>
+            [예제 09]
+            <a className="link-button" href="/1010">
               이동
             </a>
           </div>
