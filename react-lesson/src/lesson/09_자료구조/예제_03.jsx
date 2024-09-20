@@ -3,19 +3,33 @@ import React, { useState, useEffect } from "react";
 function Index0904() {
   const toppingList = ["양상추", "토마토", "불고기", "새우", "치즈", "치킨"];
 
-  const [burgerDB, setBurgerDB] = useState([{}]);
+  const [burgerDB, setBurgerDB] = useState([]);
+  const [selectedBurgerList, setSelectedBurgerList] = useState([]);
   const [selectedTopping, setSelectedTopping] = useState("");
 
   // 2
   // API를 요청하듯, 새로고침시 `requestBurgerData()` 함수 호출 후 데이터 저장
+  useEffect(() => {
+    const result = requestBurgerData();
+    setBurgerDB(result);
+  }, []);
 
   // 3
   function handelSelectTopping(value) {
-    console.log(value);
+    setSelectedTopping(value);
+
+    const list = [];
+    burgerDB.map((burger) => {
+      if (burger.topping.includes(value)) {
+        list.push(burger);
+      }
+    });
+    setSelectedBurgerList(list);
   }
 
   // 4
-  function getPriceAvg() {}
+  function getPriceAvg() {
+  }
 
   return (
     <div>
@@ -25,7 +39,8 @@ function Index0904() {
         <div>1. burgerDB라는 이름의 자료구조가 있다.</div>
         <div>2. 각 burger는 이름, 토핑(배열), 가격으로 이루어져 있다.</div>
         <div>
-          3. 사용자는 특정 토핑을 하나를 선택하여 해당 토핑이 들어간 버거들을 조회할 수 있다.
+          3. 사용자는 특정 토핑을 하나를 선택하여 해당 토핑이 들어간 버거들을
+          조회할 수 있다.
         </div>
         <div>4. 토핑 선택으로 나온 모든 버거들의 가격 합을 조회할 수 있다.</div>
       </div>
@@ -40,6 +55,12 @@ function Index0904() {
             return <option value={topping}>{topping}</option>;
           })}
         </select>
+      </div>
+
+      <div>
+        {selectedBurgerList.map((burger) => {
+          return <div>{burger.name}</div>;
+        })}
       </div>
     </div>
   );
