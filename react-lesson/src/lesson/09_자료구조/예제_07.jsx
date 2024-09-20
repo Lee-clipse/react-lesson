@@ -69,7 +69,7 @@ function Index0908() {
 
       <select
         onChange={(event) => handelCategory(event.target.value)}
-        value={selectedCategory}
+        
       >
         <option value="">장르를 선택하세요</option>
         {bookCategory.map((category) => {

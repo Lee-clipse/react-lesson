@@ -5,6 +5,7 @@ function Index0907() {
   const [userDB, setUserDB] = useState([]);
   const [pkNumber, setPkNumber] = useState("");
   const [point, setPoint] = useState(0);
+  const [checkUserList, setCheckUserList] = useState([]);
 
   const [userData, setUserData] = useState({
     pk: 0,
@@ -32,6 +33,7 @@ function Index0907() {
       id: "",
       pwd: "",
       point: 0,
+      delete: false,
     });
   }
 
@@ -48,7 +50,31 @@ function Index0907() {
   }
 
   // 5
-  function everyPointSum() {}
+  function everyPointSum() {
+    let sum = 0;
+    checkUserList.map((user) => {
+      sum += user.point;
+    });
+    return sum;
+  }
+
+  function handleCheckUser(user) {
+    const checkUser = checkUserList.includes(user);
+    if (checkUser) {
+      // 방금 클릭한 사용자가 이미 체크되어 있다면? => 삭제
+      const newUserList = checkUserList.filter((item) => {
+        if (item === user) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+      setCheckUserList(newUserList);
+    } else {
+      // 방금 클릭한 사용자가 체크되어 있지 않다면? => 담기
+      setCheckUserList([...checkUserList, user]);
+    }
+  }
 
   return (
     <div>
@@ -113,7 +139,11 @@ function Index0907() {
                 return (
                   <tr>
                     <td>
-                      <input type="checkbox"></input>
+                      <input
+                        type="checkbox"
+                        onChange={() => handleCheckUser(user)}
+                        checked={checkUserList.includes(user)}
+                      ></input>
                     </td>
                     <td>{user.pk}</td>
                     <td>{user.id}</td>
@@ -123,6 +153,7 @@ function Index0907() {
               })}
             </tbody>
           </table>
+          <div>{everyPointSum()}</div>
         </div>
         <div className="col-8"></div>
       </div>
